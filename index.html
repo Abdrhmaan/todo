@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do -p-2</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="containeer">
+       
+        <div class="tod-donApp">
+            <h1>To do list <img src="/images/icon.png"></h1>
+            <div class="row">
+                <input type="text" placeholder="your tex" id="ttex">
+                <button onclick="addtsk()">Add</button>
+            </div>
+            <ul id="list-conatiner">
+              
+          
+
+            </ul>
+          
+        </div>
+
+    </div>
+
+
+    <script>
+
+
+    let inputpox = document.querySelector("#ttex")
+    console.log(inputpox)
+    let listContainer = document.querySelector("#list-conatiner")
+
+
+    function addtsk() {
+       if(inputpox.value === ""){
+        alert("your empty")
+       }else {
+     let  li = document.createElement("li")
+        li.innerHTML = inputpox.value
+        listContainer.appendChild(li)
+        let  span = document.createElement("span")
+        span.innerHTML = "\u00d7"
+        li.appendChild(span)
+        inputpox.value = ""
+       }
+       
+        
+    }
+    listContainer.addEventListener("click" , (e)=> {
+
+
+  if(e.target.tagName == "LI"){
+    e.target.classList.toggle("check")
+  } else if (e.target.tagName == "SPAN"){
+    e.target.parentElement.remove()
+
+  }
+    })
+
+
+    </script>
+   
+
+    
+</body>
+</html>

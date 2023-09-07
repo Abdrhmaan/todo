@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+}
+.containeer {
+  background: linear-gradient(135deg , #153677, #4e085f);
+  width: 100%;
+padding: 10px; 
+min-height: 100vh;
+     
+}
+.tod-donApp {
+    width: 100%;
+    background: #fff;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+.tod-donApp h1 {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+.tod-donApp img {
+    width: 40px;
+    margin-left: 10px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.row input {
+    outline: none;
+    flex: 1;
+    border: 0;
+    padding: 10px;
+    background: transparent;
+}
+.row button{
+    background: #ff5945;
+    padding: 10px 50px;
+    color: white;
+    outline: none;
+    border: 0;
+    font-size: 20px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+ul li {
+    padding: 12px 8px 12px 50px;
+   
+    font-size: 20px;
+    list-style: none;
+    position: relative;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 23px;
+    width: 27px;
+    background-image: url(/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ ul li.check {
+    text-decoration: line-through;
+    color: #555;
+}
+ul li.check::before{
+    background-image: url(/images/checked.png);
+    
+}
+ul li span{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 6px;
+    right: 0;
+   text-align: center;
+   color: #555;
+}
+ul li span:hover{
+    background: #edeef0;
+}
